@@ -63,8 +63,8 @@ def srt2ass(input_file,sub_style):
         else:
             if re.match('-?\d\d:\d\d:\d\d', line):
                 line = line.replace('-0', '0')
-                if sub_style =='default':
-                    tmpLines += 'Dialogue: 0,' + line + ',default,,0,0,0,,'
+                if sub_style =='Default':
+                    tmpLines += 'Dialogue: 0,' + line + ',Default,,0,0,0,,'
                 elif sub_style =='ikedaCN':
                     tmpLines += 'Dialogue: 0,' + line + ',池田字幕1080p,,0,0,0,,'
                 elif sub_style == 'sugawaraCN':
@@ -90,7 +90,7 @@ def srt2ass(input_file,sub_style):
     # subLines = re.sub(r'<font\s+color="?#(\w{2})(\w{2})(\w{2})"?>', "{\\\\c&H\\3\\2\\1&}", subLines)
     # subLines = re.sub(r'</font>', "", subLines)
 
-    if sub_style == 'default':
+    if sub_style == 'Default':
         head_str = head_str_default
     elif sub_style == 'ikedaCN':
         head_str = head_str_ikeda
@@ -126,7 +126,7 @@ PlayDepth: 0
 
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: default,Meiryo,90,&H00FFFFFF,&H00FFFFFF,&H00000000,&H00050506,-1,0,0,0,100,100,5,0,1,3.5,0,2,135,135,10,1
+Style: Default,思源黑体 CN,78,&H00FFFFFF,&H00F5F1EE,&H3CBD8B1C,&H00000000,-1,0,0,0,100,100,3,0,1,3.5,0,2,11,11,3,1
 [Events]
 Format: Layer, Start, End, Style, Actor, MarginL, MarginR, MarginV, Effect, Text'''
 
